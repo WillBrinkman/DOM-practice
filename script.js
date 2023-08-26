@@ -19,6 +19,14 @@ function addItem() {
     
     });
 
+    const deleteButton = document.createElement('button');
+    deleteButton.innerHTML = 'DELETE'
+    deleteButton.className = 'delete-btn';
+    deleteButton.addEventListener('click', () => {
+        itemList.removeChild(li);
+    })
+
+    li.appendChild(deleteButton)
     li.appendChild(checkbox);  // Adding the checkbox to the li
     li.appendChild(document.createTextNode(` ${itemInput.value}`));  // Adding the text next to the checkbox
     itemList.appendChild(li);
