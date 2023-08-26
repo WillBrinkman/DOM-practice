@@ -5,7 +5,7 @@ function addItem() {
     if (itemInput.value.trim() === '') return;
 
     const li = document.createElement('li');
-    li.textContent = itemInput.value;
+    li.textContent = `• ${itemInput.value}`;
     itemList.appendChild(li);
 
     itemInput.value = '';
